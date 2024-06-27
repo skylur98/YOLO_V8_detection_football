@@ -1,6 +1,8 @@
 from pyexpat import model
 from ultralytics import YOLO
+import torch
 
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 model = YOLO('yolov8x')
 
