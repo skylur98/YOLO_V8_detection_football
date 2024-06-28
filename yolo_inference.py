@@ -1,9 +1,23 @@
 from pyexpat import model
 from ultralytics import YOLO
 import torch
+import os
+import subprocess
 
-#if you use gpu
-#device = 'cuda' if torch.cuda.is_available() else 'cpu'
+input_file = 'input_videos/test_1.mp4'
+output_file = 'output_videos/test_1_compatible.mp4'
+
+
+subprocess.run(['ffmpeg', '-i', input_file, '-vcodec', 'libx264', '-acodec', 'aac', output_file])
+
+
+# import torch
+# print(f"MPS 장치를 지원하도록 build 되었는지: {torch.backends.mps.is_built()}")
+# print(f"MPS 장치가 사용 가능한지: {torch.backends.mps.is_available()}")
+
+# os.environ['PYTORCH_ENABLE_MPS_FALLBACK'] = '1'
+
+# device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
 model = YOLO('yolov8x')
 
