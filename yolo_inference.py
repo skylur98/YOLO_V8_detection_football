@@ -4,11 +4,11 @@ import torch
 import os
 import subprocess
 
-input_file = 'input_videos/test_1.mp4'
-output_file = 'output_videos/test_1_compatible.mp4'
+# input_file = 'input_videos/test_1.mp4'
+# output_file = 'output_videos/test_1_compatible.mp4'
 
 
-subprocess.run(['ffmpeg', '-i', input_file, '-vcodec', 'libx264', '-acodec', 'aac', output_file])
+# subprocess.run(['ffmpeg', '-i', input_file, '-vcodec', 'libx264', '-acodec', 'aac', output_file])
 
 
 # import torch
@@ -19,7 +19,7 @@ subprocess.run(['ffmpeg', '-i', input_file, '-vcodec', 'libx264', '-acodec', 'aa
 
 # device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
-model = YOLO('yolov8x')
+model = YOLO('models/best.pt')
 
 results = model.predict('input_videos/test_1.mp4', save=True)
 
