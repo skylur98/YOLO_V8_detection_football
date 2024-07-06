@@ -17,6 +17,9 @@ def main():
     #Draw Object Tracks
     output_video_frames = tracker.draw_annotations(video_frames, tracks)
 
+    #draw_annotations
+    tracker = tracker.get_object_tracks
+
     #Save Video
     save_video(video_frames, 'output_videos/output_video.avi')
 
