@@ -18,7 +18,10 @@ def main():
     output_video_frames = tracker.draw_annotations(video_frames, tracks)
 
     #draw_annotations / sample
-    tracker = tracker.get_object_tracks(video_frames,read_from_stub=False)
+    tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
+                                        
+                                        stub_path="stubs/track+stubs.pok1")
+
 
     #Save Video
     save_video(video_frames, 'output_videos/output_video.avi')
