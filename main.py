@@ -20,7 +20,8 @@ def main():
     #draw_annotations / sample
     tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
                                         
-                                        stub_path="stubs/track+stubs.pok1")
+                                        stub_path="stubs/track+stubs.pk1")
+    tracker = Tracker('models/last.pt')
 
 
     #Save Video
