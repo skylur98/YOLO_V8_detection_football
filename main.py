@@ -24,11 +24,14 @@ def main():
     #Draw Object Tracks
     output_video_frames = tracker.draw_annotations(video_frames, tracks)
 
+    # Get object positions 
+    tracker.add_position_to_tracks(tracks)
+
     #draw_annotations / sample
-    tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
+    # tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
                                         
-                                        stub_path="stubs/track+stubs.pk1")
-    tracker = Tracker('models/last.pt')
+    #                                     stub_path="stubs/track+stubs.pk1")
+    # tracker = Tracker('models/last.pt')
 
 
     #Save Video
