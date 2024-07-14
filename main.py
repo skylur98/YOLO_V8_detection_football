@@ -38,7 +38,9 @@ def main():
     view_transformer = ViewTransformer()
     view_transformer.add_transformed_position_to_tracks(tracks)
 
-    
+    # Interpolate Ball Positions
+    tracks["ball"] = tracker.interpolate_ball_positions(tracks["ball"])
+
     #draw_annotations / sample
     # tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
                                         
