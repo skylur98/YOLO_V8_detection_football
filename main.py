@@ -41,6 +41,10 @@ def main():
     # Interpolate Ball Positions
     tracks["ball"] = tracker.interpolate_ball_positions(tracks["ball"])
 
+    # Speed and distance estimator
+    speed_and_distance_estimator = SpeedAndDistance_Estimator()
+    speed_and_distance_estimator.add_speed_and_distance_to_tracks(tracks)
+
     #draw_annotations / sample
     # tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
                                         
