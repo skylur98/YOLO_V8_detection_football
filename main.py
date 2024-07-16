@@ -45,6 +45,11 @@ def main():
     speed_and_distance_estimator = SpeedAndDistance_Estimator()
     speed_and_distance_estimator.add_speed_and_distance_to_tracks(tracks)
 
+     # Assign Player Teams
+    team_assigner = TeamAssigner()
+    team_assigner.assign_team_color(video_frames[0], 
+                                    tracks['players'][0])
+
     #draw_annotations / sample
     # tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
                                         
