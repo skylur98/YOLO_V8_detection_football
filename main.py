@@ -72,6 +72,10 @@ def main():
             team_ball_control.append(team_ball_control[-1])
     team_ball_control= np.array(team_ball_control)
 
+    # Draw output 
+    ## Draw object Tracks
+    output_video_frames = tracker.draw_annotations(video_frames, tracks,team_ball_control)
+
 
     #draw_annotations / sample
     # tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
