@@ -76,6 +76,10 @@ def main():
     ## Draw object Tracks
     output_video_frames = tracker.draw_annotations(video_frames, tracks,team_ball_control)
 
+    ## Draw Camera movement
+    output_video_frames = camera_movement_estimator.draw_camera_movement(output_video_frames,camera_movement_per_frame)
+
+
 
     #draw_annotations / sample
     # tracker = tracker.get_object_tracks(video_frames,read_from_stub=False,
