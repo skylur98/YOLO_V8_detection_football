@@ -79,6 +79,10 @@ def main():
     ## Draw Camera movement
     output_video_frames = camera_movement_estimator.draw_camera_movement(output_video_frames,camera_movement_per_frame)
 
+    ## Draw Speed and Distance
+    speed_and_distance_estimator.draw_speed_and_distance(output_video_frames,tracks)
+    
+
 
 
     #draw_annotations / sample
